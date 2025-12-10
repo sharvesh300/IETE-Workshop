@@ -4,10 +4,6 @@ from flask import Flask,request
 import json
 from flask_cors import CORS
 
-
-
-
-
 engine = create_engine('sqlite:///database.db')
 
 Base = declarative_base()
@@ -58,8 +54,7 @@ def product():
         product = Products(title=json_data['title'],price=json_data['price'],image=json_data['image'],description=json_data['description'])
         session.add(product)
         session.commit()
-
-
+         
     return ""
 
 @app.route("/product/<int:id>",methods=['DELETE'])
@@ -94,6 +89,5 @@ def updateProduct(id):
     return {"status": "updated", "product": product.to_dict()}
 
 
-app.run(host="localhost",port=8080,debug=True)
 
 
