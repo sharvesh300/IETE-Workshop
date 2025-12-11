@@ -67,7 +67,7 @@ You should see `(env)` at the beginning of your terminal line.
 
 **On Windows:**
 ```bash
-env\Scripts\activate
+.\env\Scripts\activate
 ```
 
 **Important:** Always activate the virtual environment before working on the project.
