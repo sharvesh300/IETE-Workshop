@@ -66,6 +66,10 @@ source env/bin/activate
 You should see `(env)` at the beginning of your terminal line.
 
 **On Windows:**
+- For policy issues
+```bash
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 ```bash
 .\env\Scripts\activate
 ```
